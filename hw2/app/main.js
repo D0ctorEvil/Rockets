@@ -2,7 +2,7 @@ let inputM1 = document.querySelector('#mas1')
 let button1 = document.querySelector('#button1')
 
 
-button1.onclick =function()
+button1.onclick =function()a
 {
 let M1 = inputM1.value;
     let arr = M1.toString().split('|');
