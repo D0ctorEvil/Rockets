@@ -31,7 +31,7 @@ button2.onclick =function(){
 let field =[[2,1,2],[0,1,2],[1,1,1]];
 alert(Tic_Tac_Toe_Checker(field) == 1 ? "'X' won":
 Tic_Tac_Toe_Checker(field) == 2 ? "'Y' won":
-Tic_Tac_Toe_Checker(field) == 0 ? "it's a cat's game" : "the board is not yet finished")
+Tic_Tac_Toe_Checker(field) == 0 ? "it's a cat's game" : "the board is not yet finished");
 }
 //-------------TASK 3-----------------
 const Find_Chair = (rooms, chairs) => {
@@ -40,16 +40,11 @@ return "Game On";
 } else{
     let count_chairs = rooms.map( el => el[1]);
     let freeChairs = rooms.map( el => el[0]).map((str, i) => count_chairs[i] - str.length < 0 ? 0 : count_chairs[i] - str.length);
-    console.log(freeChairs)
-    let sum = freeChairs.reduce((el, nel) => el + nel);
-    console.log(sum)
     let sumE = 0;
-    let id;
-    let search_id = freeChairs.map((el)=>(sumE += el) >= chairs ? 1 : 0)
-    id = search_id.findIndex( currentValue => currentValue == 1 ); 
+    let id = freeChairs.map((el)=>(sumE += el) >= chairs ? 1 : 0).findIndex( currentValue => currentValue == 1 );
     sumE=0;
-    let arr = freeChairs.map((el)=>(sumE += el)<=chairs ? el:el-sumE+chairs)   
-    return id == -1 ? "Not enough!":arr.slice(0,id+1);
+    let arr_taken_chairs = freeChairs.map((el)=>(sumE += el)<=chairs ? el:el-sumE+chairs);   
+    return id == -1 ? "Not enough!":arr_taken_chairs.slice(0,id+1);
 }
 }
 
