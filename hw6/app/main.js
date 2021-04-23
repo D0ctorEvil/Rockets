@@ -31,7 +31,7 @@ console.log(FF.parse('ff'));
 class Word {
     #word;
     #value;
-    dictionary = new Object();
+    dictionary = {};
     newWord(word, value){
         if(typeof word != "string" && typeof value != "string"){
             return false;
