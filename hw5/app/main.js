@@ -46,9 +46,7 @@ function clerk(arr){
     let fifty = 0;
     let hundred = 0;
     let i = 0;
-   for(i =0;i<arrL;i++){
-        
-        
+   for(i =0;i<arrL;i++){      
         switch (arr[i]) {
             case 25:
                 twentyFife++;
