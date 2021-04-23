@@ -44,9 +44,9 @@ function clerk(arr){
     let flag = true;
     let twentyFife = 0;
     let fifty = 0;
-    let sto = 0;
+    let hundred = 0;
     let i = 0;
-    while(i < arrL){
+   for(i =0;i<arrL;i++){
         
         
         switch (arr[i]) {
@@ -57,7 +57,8 @@ function clerk(arr){
                 twentyFife >= 1 ? (fifty++ , twentyFife--) : flag = false;
                 break;
             case 100:
-                fifty >= 1 && twentyFife >= 1 ? (sto++ , fifty-- , twentyFife--) : twentyFife >= 3 ? (sto++ , twentyFife -= 3) : flag = false; 
+                fifty >= 1 && twentyFife >= 1 ? (hundred++ , fifty-- , twentyFife--) : 
+                twentyFife >= 3 ? (hundred++ , twentyFife -= 3) : flag = false; 
                 break;
         } 
         i++;
@@ -65,6 +66,6 @@ function clerk(arr){
     return flag;
 }
 button2.onclick = function(){
-    arr=[25,50,50];
-    clerk(arr) ? alert("Все клиенты были обслужены!  :)") : alert("Не все клиенты были обслужены!  :(");
+    arr=[25,25,50,100];
+    clerk(arr) ? alert("Yes") : alert("No");
 }
