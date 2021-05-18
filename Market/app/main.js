@@ -1,0 +1,14 @@
+import ControllerDates from './dates/controllerDates.js';
+import Publisher from './helpers/publisher.js';
+import ControllerFilter from './filter/controllerFilter.js';
+import ControllerSort from './sort/controllerSort.js';
+import ControllerSearch from './search/controllerSearch.js';
+import ControllerReset from './reset/controllerReset.js';
+import controllerCart from './cart/controllerCart.js';
+const publisher = new Publisher();
+const dates = new ControllerDates(publisher);
+const sort = new ControllerSort(publisher);
+const filter = new ControllerFilter(publisher);
+const search = new ControllerSearch(publisher);
+const reset = new ControllerReset(publisher);
+const cart = new controllerCart(publisher);

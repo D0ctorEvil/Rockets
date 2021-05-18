@@ -32,15 +32,15 @@ class PaginationHelper{
 }
 
 let helper = new PaginationHelper(['a', 'b', 'c', 'd', 'e', 'f'],4);
-//helper.pageCount();
-//helper.itemCount();
-//helper.pageItemCount(0);
-//helper.pageItemCount(1);
-//helper.pageItemCount(2);
-//helper.pageIndex(5);
-//helper.pageIndex(2);
-//helper.pageIndex(20);
-//helper.pageIndex(-10);
+helper.pageCount();
+helper.itemCount();
+helper.pageItemCount(0);
+helper.pageItemCount(1);
+helper.pageItemCount(2);
+helper.pageIndex(5);
+helper.pageIndex(2);
+helper.pageIndex(20);
+helper.pageIndex(-10);
 //---------Task 2-----------
 class Fighter{
     name;

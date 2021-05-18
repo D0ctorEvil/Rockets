@@ -2,7 +2,7 @@ let inputM1 = document.querySelector('#mas1')
 let button1 = document.querySelector('#button1')
 
 
-button1.onclick =function()a
+button1.onclick =function()
 {
 let M1 = inputM1.value;
     let arr = M1.toString().split('|');
@@ -38,6 +38,7 @@ function MinSum(arr)
         console.log("Prohod")
         Minsum=Minsum + temp
     }
+    console.log("Ratata");
     return Minsum
 }
 let inputM2 = document.querySelector('#mas2')

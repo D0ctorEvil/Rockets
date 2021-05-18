@@ -1,5 +1,6 @@
 //----------------Task 1-----------------
 const count_ip = (result) => {
+let count=0;
 count = result[1][0]*256*256*256+result[1][1]*256*256+result[1][2]*256+result[1][3]-result[0][0]*256*256*256+result[0][1]*256*256+result[0][2]*256+result[0][3];
 if(count<0) {
     return "Неверно введеные значения ip адрессов"
@@ -8,7 +9,7 @@ console.log(count)
 return count;
 }    
 button1.onclick =function(){
-let result=[[0,0,0,0],[255,255,255,255]];
+let result=[[10,0,0,0],[10,0,0,50]];
 alert(count_ip(result));
 }
 //----------------Task 2-----------------
